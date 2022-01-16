@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* BODY */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    height: 100%;
+}
+body {
+    background-color:indianred;
+    width: 100%;
+    height: 100%;
+}
+
+/* HEADER */
+
+.header {
+	background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    font-family: sans-serif;
+}
+.header p {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    height: auto;
+}
+.header p:hover{
+    cursor: pointer;
+}
+
+/* MAIN */
+
+.main{
+    width: 100%;
+    height: 93%;
+    padding-top: 40px;
+}
+
+/* START */
+
+.telainicial{
+    display: block;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+.fotopedra {
+    width: 400px;
+    height: 400px;
+}
+.textorocha {
+    margin-top: -50px;
+    font-weight: bold;
+    color: white;
+    font-size: 65px;
+}
+.botaojogar {
+    display: inline-block;
+    margin-top: 70px;
+    width: 240px;
+    height: 60px;
+    background-color: rgb(37, 37, 37);
+    cursor:pointer;
+}
+.botaojogar p{
+    color: white;
+    font-size:25px;
+    font-weight: bold;
+    line-height: 60px;
+}
+.botaojogar:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/* JOGO */
+.telastart{
+    display: none;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    justify-content: center;
+    padding-top: 100px;
+    font-family: sans-serif;
+}
+.opcao{
+    width: 650px;
+    height: 30px;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(0,0,0,0) 9%, rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.7795698924731183) 60%, rgba(0,0,0,0) 91%);
+    text-align: center;
+    font-size:20px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.opcao.opB{
+    margin-top: 70px
+}
+.escolha {
+    text-align: center;
+    cursor:pointer;
+    width: 650px;
+    height: 100px;
+    color: white;
+    border: 3px solid rgb(0, 0, 0) ;
+    background-color: rgba(0, 0, 0, 0.705);
+    font-size:20px;
+    font-weight: 500;
+    line-height: 100px;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+.escolha:hover {
+    background-color: rgba(61, 61, 61, 0.795);
+}
+
+.botaovoltar {
+    text-align: center;
+    cursor:pointer;
+    margin:auto;
+    margin-top: 70px;
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: rgb(37, 37, 37);
+    font-size:13px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.botaovoltar:hover {
+    background-color: rgb(59, 59, 59);
+}
+
+/*AREIA*/
+.rocha{
+    display: none;
+    margin: auto;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 700px;
+    height: 800px;
+    background-color: rgba(0, 0, 0, 0.479);
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.479);
+}
+.atuarocha {
+    line-height: 130px;
+    font-weight: 500;
+    height: 150px;
+    color: white;
+    font-size: 80px;
+    font-family: 'Gochi Hand';
+}
+.fotoareia {
+    width: 400px;
+    height: 400px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 30px -3px rgba(0,0,0,1);
+}
+.nomerocha {
+    height: fit-content;
+    margin-top: 50px;
+    font-weight: 100;
+    color: white;
+    font-size: 35px;
+    font-family: 'Fredoka One';
+}
