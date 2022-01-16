@@ -1,5 +1,5 @@
 let home = document.getElementById("header")
-let botaovoltar = document.getElementById("botaovoltar")
+let botaovoltar = document.getElementsByClassName("botaovoltar")
 let comecar = document.getElementById("botaojogar")
 let inicio = document.getElementById("telainicial")
 let jogo = document.getElementById("telastart")
@@ -15,25 +15,8 @@ let calcario = document.getElementById("calcario")
 let marmore = document.getElementById("marmore")
 let granito = document.getElementById("granito")
 let gabro = document.getElementById("gabro")
+let rocha11 = document.getElementById("areia2")
 
-
-home.onclick = function() {telainicio()}
-botaovoltar.onclick = function() {telainicio()}
-comecar.onclick = function() {comecarjogo()}
-escolhaA.onclick = function() {escolhaAA()}
-escolhaB.onclick = function() {escolhaBB()}
-
-
-function telainicio(){
-    window.location.reload(false)
-}
-
-
-function comecarjogo(){
-    inicio.style.display = "none"
-    jogo.style.display = "block"
-    percurso.style.display = "block"
-}
 
 const chave = {
     'A Rocha é constituída por elementos soltos.': 'Areia',
@@ -101,36 +84,68 @@ const chaveid = {
 let st = chave;
 let stid = chaveid;
 
+
 escolhaA.onclick = function() {(buttonclick(this.innerText, this.id));}
 escolhaB.onclick = function() {(buttonclick(this.innerText, this.id));}
+home.onclick = function() {telainicio()}
+for (let i = 0; i < botaovoltar.length; i++){botaovoltar[i].onclick = function() {telainicio()}}
+comecar.onclick = function() {comecarjogo()}
+
+
+function telainicio(){
+    window.location.reload(false)
+}
+
+
+
+function comecarjogo(){
+    inicio.style.display = "none"
+    jogo.style.display = "block"
+}
 
 
 function buttonclick(v, b) {
     
         if(stid[b] == "areia1"){
-            jogo.style.display = "none"
-            areia.style.display = "block"
+            jogo.style.display = "none";
+            areia.style.display = "block";
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "xisto1"){
             jogo.style.display = "none"
             xisto.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "marga1"){
             jogo.style.display = "none"
             marga.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "argila1"){
             jogo.style.display = "none"
             argila.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "calcario1"){
             jogo.style.display = "none"
             calcario.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "marmore1"){
             jogo.style.display = "none"
             marmore.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "granito1"){
             jogo.style.display = "none"
             granito.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }else if(stid[b] == "gabro1"){
             jogo.style.display = "none"
             gabro.style.display = "block"
+            historico.style.marginTop = "100px";
+            historicodiv("areia1");
         }
         else{
             escolhaA.innerText = (Object.keys(st[v])[0]);
@@ -141,4 +156,24 @@ function buttonclick(v, b) {
             stid = stid[b];
             console.log(v, b)
             }
-        }
+}
+
+let myStorage = window.sessionStorage;
+
+function historicodiv(v) {
+    let historico = document.getElementById("historico")
+    let elhistorico = document.createElement("div")
+    elhistorico.className = "rochahist"
+    elhistorico.innerHTML = v
+    historico.appendChild(elhistorico)
+
+    myStorage.setItem("storedPage", historico.innerHTML);
+}
+
+onload = () => {
+    let storedPage = myStorage.getItem("storedPage");
+    if(storedPage){
+        let divContainer = document.getElementById("historico");
+        divContainer.innerHTML = storedPage;
+    }
+}
