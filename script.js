@@ -1,21 +1,15 @@
 let home = document.getElementById("header")
-let botaovoltar = document.getElementsByClassName("botaovoltar")
+let botaovoltar = document.getElementsByClassName("botaorecomecar")
+let recomecar = document.getElementById("botaorecomecar")
 let comecar = document.getElementById("botaojogar")
 let inicio = document.getElementById("telainicial")
 let jogo = document.getElementById("telastart")
 let historico = document.getElementById("historico")
 let percurso = document.getElementById("percurso")
-let escolhaA = document.getElementById("escolhaA")
+let escolhaA = document.getElementById("escolhaareia")
 let escolhaB = document.getElementById("escolhaB")
-let areia = document.getElementById("areia")
-let xisto = document.getElementById("xisto")
-let marga = document.getElementById("marga")
-let argila = document.getElementById("argila")
-let calcario = document.getElementById("calcario")
-let marmore = document.getElementById("marmore")
-let granito = document.getElementById("granito")
-let gabro = document.getElementById("gabro")
 let rocha11 = document.getElementById("areia2")
+let main = document.getElementById("main")
 
 
 const chave = {
@@ -50,39 +44,53 @@ const chave = {
     }
 };
 const chaveid = {
-    'escolhaA': 'areia1',
+    'escolhaareia': 'areia1',
 
     'escolhaB': {
     
-        'escolhaA': 'xisto1',
+        'escolhaxisto': 'xisto1',
         
         'escolhaB': {
         
             'escolhaA' : {
             
-            		'escolhaA' : "marga1",
-            		'escolhaB' : "argila1"
+            		'escolhamarga' : "marga1",
+            		'escolhaargila' : "argila1"
         				},
                 
             'escolhaB' : {
             
             		'escolhaA' : {
             
-            				'escolhaA' : "calcario1",
-            				'escolhaB' : "marmore1"
+            				'escolhacalcario' : "calcario1",
+            				'escolhamarmore' : "marmore1"
         						},
             		'escolhaB' : {
             
-            				'escolhaA' : "granito1",
-            				'escolhaB' : "gabro1"
+            				'escolhagranito' : "granito1",
+            				'escolhagabro' : "gabro1"
         						},
         				},
         }
     }
 };
 
+const rochas = [  
+	["escolhaareia", "areia", "AREIA", "./Fotos/areia.png"],
+	["escolhaxisto", "xisto", "XISTO", "./Fotos/xisto.png"],
+	["escolhamarga", "marga", "MARGA", "./Fotos/marga.png"],
+    ["escolhaargila", "argila", "ARGILA", "./Fotos/argila.png"],
+    ["escolhacalcario", "calcario", "CALCÁRIO", "./Fotos/calcario.png"],
+    ["escolhamarmore", "marmore", "MARMORE", "./Fotos/marmore.png"],
+    ["escolhagranito", "granito", "GRANITO", "./Fotos/granito.png"],
+    ["escolhagabro", "gabro", "GABRO", "./Fotos/gabro.png"],
+];
+
 let st = chave;
 let stid = chaveid;
+
+
+
 
 
 escolhaA.onclick = function() {(buttonclick(this.innerText, this.id));}
@@ -107,45 +115,21 @@ function comecarjogo(){
 function buttonclick(v, b) {
     
         if(stid[b] == "areia1"){
-            jogo.style.display = "none";
-            areia.style.display = "block";
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "xisto1"){
-            jogo.style.display = "none"
-            xisto.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "marga1"){
-            jogo.style.display = "none"
-            marga.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "argila1"){
-            jogo.style.display = "none"
-            argila.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "calcario1"){
-            jogo.style.display = "none"
-            calcario.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "marmore1"){
-            jogo.style.display = "none"
-            marmore.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "granito1"){
-            jogo.style.display = "none"
-            granito.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }else if(stid[b] == "gabro1"){
-            jogo.style.display = "none"
-            gabro.style.display = "block"
-            historico.style.marginTop = "100px";
-            historicodiv("areia1");
+            rochafinal(b)
         }
         else{
             escolhaA.innerText = (Object.keys(st[v])[0]);
@@ -157,6 +141,61 @@ function buttonclick(v, b) {
             console.log(v, b)
             }
 }
+
+
+function rochafinal(b){
+    jogo.style.display = "none"
+    historico.style.marginTop = "70px"
+
+    for(i=0;i<rochas.length;i++){
+        if(rochas[i][0] == b){
+
+            let rochafinal = document.createElement("div")
+            rochafinal.className = "rocha"
+            rochafinal.id = rochas[i][1]
+            let atuarocha = document.createElement("p")
+            atuarocha.innerText = "A SUA ROCHA É"
+            atuarocha.className = "atuarocha"
+
+            let fotorocha = document.createElement("img")
+            fotorocha.src = rochas[i][3]
+            fotorocha.alt = rochas[i][1]
+            fotorocha.className = "fotorochafin"
+
+            let nomerocha = document.createElement("p")
+            nomerocha.innerText = rochas[i][2]
+            nomerocha.className = "nomerocha"
+
+            let botaorecomecar = document.createElement("div")
+            botaorecomecar.className = "botaorecomecar"
+            botaorecomecar.id = "botaorecomecar"
+
+            let textorecomecar = document.createElement("p")
+            textorecomecar.innerText = "RECOMEÇAR JOGO"
+
+            main.prepend(rochafinal)
+            rochafinal.appendChild(atuarocha)
+            rochafinal.appendChild(fotorocha)
+            rochafinal.appendChild(nomerocha)
+            rochafinal.appendChild(botaorecomecar)
+            botaorecomecar.appendChild(textorecomecar)
+
+        }
+    }
+    for (i = 0; i < botaovoltar.length; i++) {
+        botaovoltar[i].style.marginTop = "40px"
+        botaovoltar[i].onclick = function() {telainicio()}
+    }
+}
+
+
+
+
+
+/*
+        let fotorocha = document.createElement("img")
+        fotorocha.src = rochas[i][0]
+
 
 let myStorage = window.sessionStorage;
 
@@ -176,4 +215,4 @@ onload = () => {
         let divContainer = document.getElementById("historico");
         divContainer.innerHTML = storedPage;
     }
-}
+} */

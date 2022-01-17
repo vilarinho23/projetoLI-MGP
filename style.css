@@ -131,7 +131,7 @@ body {
     background-color: rgba(61, 61, 61, 0.795);
 }
 
-.botaovoltar {
+.botaorecomecar {
     text-align: center;
     cursor:pointer;
     margin:auto;
@@ -146,23 +146,23 @@ body {
     border-radius: 10px;
 }
 
-.botaovoltar:hover {
+.botaorecomecar:hover {
     background-color: rgb(59, 59, 59);
 }
 
 
 /*ROCHAS*/
 .rocha{
-    display: none;
+    display: block;
     margin: auto;
     justify-content: center;
     align-content: center;
     text-align: center;
     width: 660px;
-    height: 570px;
+    height: 600px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.479);
-    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.479);
+    box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.479);
 }
 .atuarocha {
     line-height: 100px;
@@ -173,8 +173,8 @@ body {
     letter-spacing: 5px;
     font-family: 'Gochi Hand';
 }
-.fotoareia {
-    width: 300px;
+.fotorochafin {
+    width: 400px;
     height: 300px;
     border-radius: 50px;
     box-shadow: 0px 0px 30px -3px rgba(0,0,0,1);
@@ -187,23 +187,6 @@ body {
     color: white;
     font-size: 35px;
     font-family: 'Fredoka One';
-}
-.botaovoltar2 {
-    text-align: center;
-    cursor:pointer;
-    margin:auto;
-    width: 200px;
-    height: 40px;
-    color: white;
-    background-color: rgb(37, 37, 37);
-    font-size:15px;
-    line-height: 40px;
-    font-family: 'Fredoka One';
-    border-radius: 10px;
-}
-
-.botaovoltar2:hover {
-    background-color: rgb(59, 59, 59);
 }
 
 
