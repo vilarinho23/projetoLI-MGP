@@ -112,26 +112,21 @@ function comecarjogo(){
 }
 
 
+
 function buttonclick(v, b) {
-    
-        if(stid[b] == "areia1"){
-            rochafinal(b)
-        }else if(stid[b] == "xisto1"){
-            rochafinal(b)
-        }else if(stid[b] == "marga1"){
-            rochafinal(b)
-        }else if(stid[b] == "argila1"){
-            rochafinal(b)
-        }else if(stid[b] == "calcario1"){
-            rochafinal(b)
-        }else if(stid[b] == "marmore1"){
-            rochafinal(b)
-        }else if(stid[b] == "granito1"){
-            rochafinal(b)
-        }else if(stid[b] == "gabro1"){
-            rochafinal(b)
+
+        function procurarrocha(){
+            for(let i = 0; i < rochas.length; i++){
+                if(rochas[i][0] == b){
+                rochafinal(b)
+                return 1
+                }
+            }
+            return 0
         }
-        else{
+        console.log(procurarrocha())
+
+        if(procurarrocha() == "0"){
             escolhaA.innerText = (Object.keys(st[v])[0]);
             escolhaB.innerText = (Object.keys(st[v])[1]);
             escolhaA.setAttribute("id",Object.keys(stid[b])[0]);
@@ -139,7 +134,8 @@ function buttonclick(v, b) {
             st = st[v];
             stid = stid[b];
             console.log(v, b)
-            }
+        }
+
 }
 
 
@@ -188,19 +184,7 @@ function rochafinal(b){
     }
 }
 
-
-
-
-
-/*
-        let fotorocha = document.createElement("img")
-        fotorocha.src = rochas[i][0]
-
-
-let myStorage = window.sessionStorage;
-
-function historicodiv(v) {
-    let historico = document.getElementById("historico")
+/* function historicodiv(v) {
     let elhistorico = document.createElement("div")
     elhistorico.className = "rochahist"
     elhistorico.innerHTML = v
@@ -215,4 +199,6 @@ onload = () => {
         let divContainer = document.getElementById("historico");
         divContainer.innerHTML = storedPage;
     }
-} */
+} 
+
+*/
