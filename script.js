@@ -114,28 +114,22 @@ function comecarjogo(){
 
 
 function buttonclick(v, b) {
-
         function procurarrocha(){
             for(let i = 0; i < rochas.length; i++){
                 if(rochas[i][0] == b){
                 rochafinal(b)
-                return 1
+                return "rocha encontrada"
                 }
             }
-            return 0
-        }
-        console.log(procurarrocha())
-
-        if(procurarrocha() == "0"){
             escolhaA.innerText = (Object.keys(st[v])[0]);
             escolhaB.innerText = (Object.keys(st[v])[1]);
             escolhaA.setAttribute("id",Object.keys(stid[b])[0]);
             escolhaB.setAttribute("id",Object.keys(stid[b])[1]);
             st = st[v];
             stid = stid[b];
-            console.log(v, b)
+            return "rocha não encontrada"
         }
-
+        console.log(procurarrocha())
 }
 
 

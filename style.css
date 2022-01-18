@@ -204,6 +204,37 @@ body {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
+    position: relative;
+}
+.historicotexto{
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    font-family: 'Gochi Hand';
+    color: white;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+.salvartexto{
+    font-family: 'Gochi Hand';
+    color: white;
+    font-size: 20px;
+}
+.salvardiv{
+    position:absolute;
+    text-align: center;
+    width: 180px;
+    height: 27px;
+    line-height: 27px;
+    top: -29px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.salvardiv:hover{
+    background-color: rgb(59, 59, 59);
 }
 .rochahist {
     margin-top: auto;
