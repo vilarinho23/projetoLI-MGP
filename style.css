@@ -43,6 +43,11 @@ body {
     padding-top: 40px;
 }
 
+.jogo{
+    width: 660px;
+    height: 600px;
+    margin: auto;
+}
 /* START */
 
 .telainicial{
@@ -196,17 +201,21 @@ body {
     background-color: rgba(0, 0, 0, 0.479);
     width: 1200px;
     height: 150px;
+    margin-top: 70px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+.historicodisplay {
+    width: 1200px;
+    height: 150px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: start;
     gap: 15px;
-    margin-top: 170px;
-    margin-right: auto;
-    margin-left: auto;
     padding-left: 15px;
-    position: relative;
 }
-.historicotexto{
+.historicoheader{
     position: absolute;
     top: -35px;
     left: 10px;
@@ -215,12 +224,12 @@ body {
     font-size: 35px;
     letter-spacing: 2px;
 }
-.salvartexto{
+.guardarhisttexto{
     font-family: 'Gochi Hand';
     color: white;
     font-size: 20px;
 }
-.salvardiv{
+.guardarhistdiv{
     position:absolute;
     text-align: center;
     width: 180px;
@@ -233,7 +242,7 @@ body {
     border: 2px solid black;
     cursor: pointer;
 }
-.salvardiv:hover{
+.guardarhistdiv:hover{
     background-color: rgb(59, 59, 59);
 }
 .rochahist {
@@ -246,7 +255,7 @@ body {
     width: 100px;
     height: 120px;
     background-color: rgba(0, 0, 0, 0.479);
-    padding-top: 5px;
+    padding-top: 10px;
     left: 50px;
 }
 .fotorochahist {
@@ -257,6 +266,6 @@ body {
 }
 .nomerochahist {
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Fredoka One';
 }

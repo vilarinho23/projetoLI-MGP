@@ -1,0 +1,15 @@
+﻿id,parent_id,question_id,texto
+1,0,escolhaareia,A Rocha é constituída por elementos soltos.
+1,0,primpergunta,A Rocha é constituída por elementos unidos.
+2,1,escolhaxisto,A Rocha tem aspeto laminado.
+2,1,segpergunta,A Rocha tem aspeto não laminado.
+3,2,terpergunta,A Rocha cheira a barro quando cortada.
+4,2,quarpergunta,A Rocha não cheira a barro quando cortada.
+5,4,escolhamarga,A Rocha faz efervescência em contacto com ácidos.
+5,4,escolhaargila,A Rocha não faz efervescência em contacto com ácidos.
+6,3,quipergunta,A Rocha faz efervescência em contacto com ácidos.
+7,3,sextpergunta,A Rocha não faz efervescência em contacto com ácidos.
+8,6,escolhacalcario,A Rocha tem aspeto compacto (sem cristais).
+8,6,escolhamarmore,A Rocha tem cristais visíveis.
+9,7,escolhagranito,A Rocha tem cor clara e é constituída por minerais distintos.
+9,7,escolhagabro,A Rocha tem cor escura e é constituída por minerais distintos.

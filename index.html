@@ -13,35 +13,41 @@
 		<p id="header">WhichRocha</p>
 	</header>
     <main class="main" id="main">
-        <div class="telainicial" id="telainicial">
-            <img src="./Fotos/logo.png" alt="logo" class="fotopedra" id="fotopedra">
-            <p class="textorocha" id="textorocha">DESCUBRA A SUA ROCHA</p>
-            <div class="botaojogar" id="botaojogar">
-            <p>INICIAR</p>
-            </div> 
-        </div>
-        <div class="telastart" id="telastart">
-            <div class="opcao opA" id="opcaoA">
-                <p>OPÇÃO A</p>
+        <div class="jogo" id="jogo">
+            <div class="telainicial" id="telainicial">
+                <img src="./Fotos/logo.png" alt="logo" class="fotopedra" id="fotopedra">
+                <p class="textorocha" id="textorocha">DESCUBRA A SUA ROCHA</p>
+                <div class="botaojogar" id="botaojogar">
+                <p>INICIAR</p>
+                </div> 
             </div>
-            <div class="escolha esA" id="escolhaareia">
-                A Rocha é constituída por elementos soltos.
+            <div class="telastart" id="telastart">
+                <div class="opcao opA" id="opcaoA">
+                    <p>OPÇÃO A</p>
+                </div>
+                <div class="escolha esA" id="escolhaareia">
+                    A Rocha é constituída por elementos soltos.
+                </div>
+                <div class="opcao opB" id="opcaoB">
+                    <p>OPÇÃO B</p>
+                </div>
+                <div class="escolha esB" id="primpergunta">
+                    A Rocha é constituída por elementos unidos.
+                </div> 
+                <div class="botaorecomecar">
+                    <p>RECOMEÇAR JOGO</p>
+                </div> 
             </div>
-            <div class="opcao opB" id="opcaoB">
-                <p>OPÇÃO B</p>
-            </div>
-            <div class="escolha esB" id="escolhaB">
-                A Rocha é constituída por elementos unidos.
-            </div> 
-            <div class="botaorecomecar">
-                <p>RECOMEÇAR JOGO</p>
-            </div> 
         </div>
         <div class="historico" id="historico">
-            <p class="historicotexto">HISTÓRICO</p>
-            <div class= "salvardiv"><p class="salvartexto">GUARDAR HISTÓRICO</p></div>
+            <p class="historicoheader">HISTÓRICO</p>
+            <div class="guardarhistdiv" id="guardarhist"><p class="guardarhisttexto">GUARDAR HISTÓRICO</p></div>
+            <div class="historicodisplay" id="historicodisplay">
+
+            </div>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
