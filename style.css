@@ -47,6 +47,7 @@ body {
     width: 660px;
     height: 600px;
     margin: auto;
+    position: relative;
 }
 /* START */
 
@@ -199,7 +200,7 @@ body {
 /* HISTORICO */
 .historico {
     background-color: rgba(0, 0, 0, 0.479);
-    width: 1200px;
+    width: 955px;
     height: 150px;
     margin-top: 70px;
     margin-right: auto;
@@ -207,21 +208,22 @@ body {
     position: relative;
 }
 .historicodisplay {
-    width: 1200px;
-    height: 150px;
+    width: 955px;
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
+    flex-wrap: wrap;
+    max-height: 100%;
     gap: 15px;
     padding-left: 15px;
+    padding-top: 15px;
+    overflow-y: auto;
 }
 .historicoheader{
     position: absolute;
-    top: -35px;
+    top: -37px;
     left: 10px;
     font-family: 'Gochi Hand';
     color: white;
-    font-size: 35px;
+    font-size: 40px;
     letter-spacing: 2px;
 }
 .guardarhisttexto{
@@ -236,7 +238,7 @@ body {
     height: 27px;
     line-height: 27px;
     top: -29px;
-    right: 10px;
+    right: 5px;
     background-color: rgba(0, 0, 0, 0.479);
     border-radius: 10px;
     border: 2px solid black;
@@ -246,9 +248,6 @@ body {
     background-color: rgb(59, 59, 59);
 }
 .rochahist {
-    margin-top: auto;
-    margin-bottom: auto;
-    display: block;
     justify-content: center;
     align-content: center;
     text-align: center;
@@ -256,7 +255,6 @@ body {
     height: 120px;
     background-color: rgba(0, 0, 0, 0.479);
     padding-top: 10px;
-    left: 50px;
 }
 .fotorochahist {
     width: 80px;
@@ -268,4 +266,65 @@ body {
     color: white;
     font-size: 15px;
     font-family: 'Fredoka One';
+}
+
+/* PERCURSO */
+.percursocontainer{
+    display: none;
+    position: absolute;
+    left: 725px;
+    top: 10px;
+    width: 500px;
+    height: 500px;
+}
+.percursotexto{
+    text-align: center;
+    font-family: 'Gochi Hand';
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+.barrapercurso{
+    width: 480px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: rgb(37, 37, 37);
+    margin: auto;
+    margin-bottom: 5px;
+}
+.percurso_rocha{
+    text-align: center;
+    color: white;
+    width: 150px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.479);
+    font-size: 20px;
+    font-family: 'Fredoka One';
+    letter-spacing: 1px;
+    line-height: 30px;
+    border-radius: 10px;
+    margin: auto;
+}
+.percurso_int{
+    text-align: center;
+    color: white;
+    width: 480px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.479);
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    margin: auto;
+}
+.percurso_seta{
+    width: 30px;
+    height: 40px;
+    margin: auto;
+}
+.fotoseta{
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
 }
