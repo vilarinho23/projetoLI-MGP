@@ -20,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: auto; 
     height: 60px;
     font-family: sans-serif;
 }
@@ -327,4 +327,19 @@ body {
     margin-top: 5px;
     width: 30px;
     height: 30px;
+}
+
+@media only screen and (max-device-width: 1919px) {
+    .jogo{
+        width: 660px;
+        height: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .percursocontainer{
+        display: none;
+        width: 500px;
+        height: 500px;
+    }
 }

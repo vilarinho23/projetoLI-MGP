@@ -148,7 +148,7 @@ function rochafinal(b){
             let textorecomecar = document.createElement("p")
             textorecomecar.innerText = "RECOMEÇAR JOGO"
 
-            jogocontainer.appendChild(rochafinal)
+            jogocontainer.prepend(rochafinal)
             rochafinal.appendChild(atuarocha)
             rochafinal.appendChild(fotorocha)
             rochafinal.appendChild(nomerocha)
