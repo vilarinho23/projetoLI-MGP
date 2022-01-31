@@ -20,8 +20,6 @@ Esta ferramenta web serve para facilitar a classificação de rochas, através d
 
 ## Autores
 
-Contribuidores nomes e contactos:
-
 * André Silva andresalgadosilva@ua.pt
 * David Vilarinho davidvilarinho@ua.pt
 * Diogo Oliveira diogofilipe18@ua.pt
