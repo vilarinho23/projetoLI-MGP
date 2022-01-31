@@ -22,10 +22,10 @@ Esta ferramenta web serve para facilitar a classificação de rochas, através d
 
 Contribuidores nomes e contactos:
 
-André Silva andresalgadosilva@ua.pt
-David Vilarinho davidvilarinho@ua.pt
-Diogo Oliveira diogofilipe18@ua.pt
-Gabriel Pinho gabrielfpinho@ua.pt
+* André Silva andresalgadosilva@ua.pt
+* David Vilarinho davidvilarinho@ua.pt
+* Diogo Oliveira diogofilipe18@ua.pt
+* Gabriel Pinho gabrielfpinho@ua.pt
 
 ## Histórico de Versões
 
