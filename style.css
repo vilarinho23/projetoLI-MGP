@@ -329,17 +329,22 @@ body {
     height: 30px;
 }
 
-@media only screen and (max-device-width: 1919px) {
+@media only screen and (max-device-width: 1519px) {
+
     .jogo{
         width: 660px;
-        height: 1200px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
+        height: 600px;
+        height: auto;
+        position: relative;
     }
     .percursocontainer{
-        display: none;
-        width: 500px;
-        height: 500px;
+        position: static;
+        margin-top: 30px;
+        margin-right: auto;
+        margin-left: auto;
+        height: auto;
+    }
+    .historico {
+        margin-top: 100px;
     }
 }
