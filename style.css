@@ -329,7 +329,7 @@ body {
     height: 30px;
 }
 
-@media only screen and (max-device-width: 1519px) {
+@media only screen and (max-device-width: 1919px) {
 
     .jogo{
         width: 660px;
